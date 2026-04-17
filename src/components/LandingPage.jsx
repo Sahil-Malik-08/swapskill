@@ -13,7 +13,7 @@ const LandingPage = () => {
 
   const fetchPublicUsers = async () => {
     try {
-      let url = 'http://localhost:5000/api/public/users/discover';
+      let url = 'https://swapskill-2-1p6q.onrender.com/api/public/users/discover';
       const params = new URLSearchParams();
       
       if (searchTerm) params.append('search', searchTerm);
