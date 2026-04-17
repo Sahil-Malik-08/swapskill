@@ -19,7 +19,7 @@ const AdminPanel = ({ user }) => {
       const token = localStorage.getItem('token');
       
       if (activeTab === 'users') {
-        const response = await fetch(`http://localhost:5000/api/admin/users?page=${currentPage}`, {
+        const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/admin/users?page=${currentPage}`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (response.ok) {
@@ -28,7 +28,7 @@ const AdminPanel = ({ user }) => {
           setTotalPages(data.totalPages);
         }
       } else if (activeTab === 'swaps') {
-        const response = await fetch(`http://localhost:5000/api/admin/swaps?page=${currentPage}`, {
+        const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/admin/swaps?page=${currentPage}`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (response.ok) {
@@ -37,7 +37,7 @@ const AdminPanel = ({ user }) => {
           setTotalPages(data.totalPages);
         }
       } else if (activeTab === 'stats') {
-        const response = await fetch('http://localhost:5000/api/admin/stats/swaps', {
+        const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/admin/stats/swaps', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (response.ok) {
@@ -55,7 +55,7 @@ const AdminPanel = ({ user }) => {
   const handleBanUser = async (userId, isBanned) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/admin/users/${userId}/ban`, {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/admin/users/${userId}/ban`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const AdminPanel = ({ user }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/admin/swaps/${requestId}`, {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/admin/swaps/${requestId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -99,7 +99,7 @@ const AdminPanel = ({ user }) => {
   const exportData = async (type) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/admin/export/${type}`, {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/admin/export/${type}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
