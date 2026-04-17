@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
-const API_BASE = 'http://localhost:5000/api/chat';
+const API_BASE = 'https://swapskill-2-1p6q.onrender.com/api/chat';
 
 const ChatPage = ({ user }) => {
   const [conversations, setConversations] = useState([]);
