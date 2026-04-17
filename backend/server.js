@@ -59,7 +59,7 @@ app.use('*', (req, res) => {
 // Connect to MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.mongodb+srv://sahilabhibro11_db_user:<db_password>@swapskill-cluster.lio28ve.mongodb.net/?appName=swapskill-cluster);
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('MongoDB connected successfully');
   } catch (error) {
     console.error('MongoDB connection error:', error);
