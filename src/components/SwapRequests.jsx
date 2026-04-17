@@ -38,7 +38,7 @@ const SwapRequests = ({ user }) => {
   const handleAction = async (requestId, action) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/swaps/${action}/${requestId}', {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/swaps/${action}/${requestId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`
