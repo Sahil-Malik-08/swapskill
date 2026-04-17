@@ -27,7 +27,7 @@ const Profile = ({ user, setUser }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/users/profile', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/users/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const Profile = ({ user, setUser }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/users/skills/offered', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/users/skills/offered', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const Profile = ({ user, setUser }) => {
   const removeSkillOffered = async (skill) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/users/skills/offered/${encodeURIComponent(skill)}`, {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/users/skills/offered/${encodeURIComponent(skill)}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -107,7 +107,7 @@ const Profile = ({ user, setUser }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/users/skills/wanted', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/users/skills/wanted', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ const Profile = ({ user, setUser }) => {
   const removeSkillWanted = async (skill) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/users/skills/wanted/${encodeURIComponent(skill)}`, {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/users/skills/wanted/${encodeURIComponent(skill)}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
