@@ -18,7 +18,7 @@ const SwapRequests = ({ user }) => {
   const fetchRequests = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/swaps/my-requests', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/swaps/my-requests', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -38,7 +38,7 @@ const SwapRequests = ({ user }) => {
   const handleAction = async (requestId, action) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/swaps/${action}/${requestId}`, {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/swaps/${action}/${requestId}', {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -60,7 +60,7 @@ const SwapRequests = ({ user }) => {
   const handleCancel = async (requestId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/swaps/cancel/${requestId}`, {
+      const response = await fetch(`https://swapskill-2-1p6q.onrender.com/api/swaps/cancel/${requestId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -93,7 +93,7 @@ const SwapRequests = ({ user }) => {
         ? selectedRequest.toUser._id 
         : selectedRequest.fromUser._id;
 
-      const response = await fetch('http://localhost:5000/api/ratings/submit', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/ratings/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
