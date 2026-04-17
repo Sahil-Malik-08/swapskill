@@ -18,7 +18,7 @@ const Dashboard = ({ user }) => {
   const fetchDashboardData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/swaps/my-requests', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/swaps/my-requests', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
