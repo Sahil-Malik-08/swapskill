@@ -27,7 +27,7 @@ const Discover = ({ user }) => {
 
     try {
       const token = localStorage.getItem('token');
-      let url = 'http://localhost:5000/api/users/discover';
+      let url = 'https://swapskill-2-1p6q.onrender.com/api/users/discover';
       const params = new URLSearchParams();
       
       if (searchTerm) params.append('search', searchTerm);
@@ -59,7 +59,7 @@ const Discover = ({ user }) => {
     
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/swaps/request', {
+      const response = await fetch('https://swapskill-2-1p6q.onrender.com/api/swaps/request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
